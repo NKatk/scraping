@@ -66,7 +66,7 @@ const server = app.listen(3000, (err)=>{
         }
     }
 
-    console.log(allCompanyData); //all data that needs us
+    fs.writeFileSync('./allCompanyData.json', JSON.stringify(allCompanyData), 'utf-8'); //all data that needs us 
     server.close(); //stop server
 })();
 
